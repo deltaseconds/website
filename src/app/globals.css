@@ -71,12 +71,175 @@ body {
 
 .container {
   max-width: 1200px;
-  margin: 0 auto 20px auto;
+  margin: 150px auto 20px auto;
   padding: 0 20px 20px 20px;
   border: #EBE5C2 solid 1px;
   border-radius: 10px;
   background: #EBE5C2;
+  display: flex;
+  align-items: flex-start; 
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  transition: transform 0.3s ease, font-size 0.3s ease, font-weight 0.3s ease, color 0.3s ease, background 0.3s ease;
+
+}
+
+.container a, p {
+  filter: drop-shadow(0px 2px 0px rgba(0, 0, 0, 0.25)); 
+}
+
+.container-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #504B38;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transform-origin: center; 
+  transition: transform 0.3s ease, font-size 0.3s ease, font-weight 0.3s ease, color 0.3s ease, background 0.3s ease;
+
+}
+
+.container-title:hover {
+  font-size: 1.7em;
+  font-weight: 700;
+  color: #2e2c24;
+}
+
+.container-img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transform-origin: center; 
+  transition: transform 0.3s ease, font-size 0.3s ease, font-weight 0.3s ease, color 0.3s ease, background 0.3s ease;
+}
+
+.container-img:hover {
+  transform: scale(0.90);
+}
+.container-li {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #504B38;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transform-origin: center; 
+  transition: transform 0.3s ease, font-size 0.3s ease, font-weight 0.3s ease, color 0.3s ease, background 0.3s ease;
+}
+
+.container-li:hover {
+  font-size: 1.3em;
+  font-weight: 400;
+  color: #2e2c24;
+}
+.container:hover {
+  transform: scale(1.02);
+  
+}
+
+.work-url {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #504B38;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative; /* Ensure the pseudo-element is positioned relative to the parent */
+  transform-origin: center; 
+  transition: transform 0.3s ease, font-size 0.3s ease, font-weight 0.3s ease, color 0.3s ease, background 0.3s ease;
+}
+
+.work-url:hover {
+  opacity: 0.9;
+  text-shadow: 0px -5px #ec2225, 0px 5px #00c2cb, -5px 0px #ec2225, 5px 0px #00c2cb;
+}
+
+.work-url::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #e0ffff;
+  z-index: -1;
+  width: 100%; /* Ensure it covers the entire width of the parent */
+  height: 100%; /* Ensure it covers the entire height of the parent */
+  display: flex;
+  align-items: center; /* Vertically center the text */
+  justify-content: center; /* Horizontally center the text */
+}
+
+.work-url:hover::before {
+  animation: animate 48ms ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes animate {
+  0%, 100% {
+    top: -7px;
+    left: 0;
+    opacity: 1;
+  }
+  20% {
+    top: 0;
+    left: -10px;
+    opacity: 0.7;
+  }
+  40% {
+    top: 7px;
+    left: 0;
+    opacity: 0.2;
+  }
+  60% {
+    top: 0;
+    left: 10px;
+    opacity: 0.3;
+  }
+  80% {
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+  }
+}
+
+.container img {
+  margin-right: 20px;
+  margin-top: 20px;
+  border-radius: 5%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.container-main {
+  flex: 1;
+  margin-top: 20px;
 }
 
 
-/* https://colorhunt.co/palette/f8f3d9ebe5c2b9b28a504b38 */
+.container-main li {
+  margin-bottom: 10px;
+}
+
+.container-link {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #504B38;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transform-origin: center; 
+  transition: transform 0.3s ease, font-size 0.3s ease, font-weight 0.3s ease, color 0.3s ease, background 0.3s ease, text-decoration 0.3s ease;  
+}
+
+.container-link:hover {
+  font-size: 1.3em;
+  font-weight: 400;
+  color: #2e2c24;
+  text-decoration: dotted;
+}
+
+.container-activities {
+  font-size: 2em;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+/* https://colorhunt.co/palette/f8f3d9ebe5c22e2c24504b38 */
+
+
+
+
